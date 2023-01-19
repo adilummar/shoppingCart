@@ -1,0 +1,25 @@
+
+    {{! creating a section under navbar }}
+
+    <section>
+      <div class="container mt-5">
+        <div class="row">
+          {{#each products}}
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem; display:flex;justify-content:space-around;align-items:center">
+              <img class="card-img-top" style="height:200px;width:200px;" src="/images/{{this._id}}.jpg" alt="Card image cap" />
+              <div class="card-body">
+                <h5 class="card-title">{{this.name}}</h5>
+                <p class="card-text">{{this.discription}}</p>
+                <a href="/add-to-cart/{{this._id}}" class="btn btn-primary">get product</a>
+              </div>
+            </div>
+          </div>
+          {{/each}}
+          
+          
+        </div>
+      </div>
+    </section>
+
+    
